@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Exercise Tracker</title>
+		<link rel="stylesheet" href="/css/styles.css" />
+		<script defer src="/js/app.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="hero">
+				<h1>Exercise Tracker</h1>
+			</header>
+			<div class="formGroup">
+				<form action="/api/exercise/new-user" class="formGroup__form" method="POST">
+					<h2 class="formGroup__tag">Create A New User</h2>
+					<label for="userName">Enter User Name</label>
+					<input
+						type="string"
+						name="userName"
+						id="userName"
+						class="formGroup__input"
+						placeholder="E.g John Doe"
+					/>
+					<button class="formGroup__submit" type="submit">Create User</button>
+				</form>
+			</div>
+			<div class="formGroup">
+				<form action="/api/exercise/new-user" class="formGroup__form" method="POST">
+					<h2 class="formGroup__tag">Add Exercise For User</h2>
+					<input
+						type="string"
+						name="userId"
+						id="userId"
+						class="formGroup__input"
+						placeholder="E.g 987xvh58"
+					/>
+					<input
+						type="string"
+						name="description"
+						id="description"
+						class="formGroup__input"
+						placeholder="E.g Walking"
+					/>
+					<input
+						type="number"
+						name="duration"
+						id="duration"
+						class="formGroup__input"
+						placeholder="E.g 40"
+					/>
+					<input type="date" name="date" id="date" class="formGroup__input" />
+					<button class="formGroup__submit" type="submit">Add Exercise</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
