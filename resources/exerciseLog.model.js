@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { User } = require('./user.model');
 const exerciseLog = new mongoose.Schema({
-	userName: {
+	user: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: User,
 	},
@@ -21,4 +21,4 @@ const exerciseLog = new mongoose.Schema({
 
 const ExerciseLog = mongoose.model('exerciseLog', exerciseLog);
 
-module.exports = ExerciseLog;
+module.exports = { ExerciseLog };

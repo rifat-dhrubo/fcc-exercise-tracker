@@ -11,8 +11,10 @@ router = Router();
 
 router.post('/new-user', createUsers);
 
-router.post('/users', getAllUsers);
+router.get('/users', getAllUsers);
 
-router.get('/log/:id', getExerciseLog);
+router.post('/add', addExerciseLog);
+
+router.get('/log/:id/:from?/:to?/:limit?', getExerciseLog);
 
 module.exports = router;
